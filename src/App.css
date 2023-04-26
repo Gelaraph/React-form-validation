@@ -1,0 +1,220 @@
+/* Global styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --primary-color: #e14;
+  --secondary-color: #124;
+  --accent-color: #e72;
+}
+
+/* Body */
+
+body {
+  font: 400 16px sans-serif;
+  color: #444;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+/* Container */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+
+.card {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(var(--secondary-color), 0.06);
+  overflow: hidden;
+}
+
+/* Waves */
+
+.waves {
+  height: 80px;
+  background: linear-gradient(
+    to bottom left,
+    var(--primary-color),
+    var(--accent-color)
+  );
+}
+
+/* Heading */
+
+h1 {
+  margin: 2rem 2rem 0;
+  font-size: 1.62rem;
+}
+
+/* Form */
+
+.form {
+  padding: 2rem;
+}
+
+/* Button */
+
+.button {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 3px;
+  padding: 1ch;
+  font-size: 1rem;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Mixins */
+
+input {
+  display: block;
+  width: 100%;
+  border: 2px solid #eee;
+  padding: 1ch;
+  border-radius: 3px;
+  transition: 150ms ease;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+
+.label {
+  position: absolute;
+  top: 1ch;
+  left: 1ch;
+  padding: 0 0.5ch;
+  pointer-events: none;
+  transition: 150ms ease;
+  color: #888;
+}
+
+.label-focus {
+  position: absolute;
+  top: 0;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: translateY(-50%);
+  background-color: #fff;
+  font-weight: 600;
+}
+
+/* Text Input */
+.text-input {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.text-input label {
+  position: absolute;
+  top: 1ch;
+  left: 1ch;
+  padding: 0 0.5ch;
+  pointer-events: none;
+  transition: 150ms ease;
+  color: #888;
+}
+
+.text-input label.label-focus {
+  position: absolute;
+  top: 0;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: translateY(-50%);
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.text-input input {
+  display: block;
+  width: 100%;
+  border: 2px solid #eee;
+  padding: 1ch;
+  border-radius: 3px;
+  transition: 150ms ease;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.text-input input.input-focus {
+  border-color: var(--primary-color);
+}
+
+/* Text Area */
+.text-area {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.text-area label {
+  position: absolute;
+  top: 1ch;
+  left: 1ch;
+  padding: 0 0.5ch;
+  pointer-events: none;
+  transition: 150ms ease;
+  color: #888;
+}
+
+.text-area label.label-focus {
+  position: absolute;
+  top: 0;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: translateY(-50%);
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.text-area textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid #eee;
+  padding: 1ch;
+  border-radius: 3px;
+  transition: 150ms ease;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  height: 8em;
+}
+
+.text-area textarea.input-focus {
+  border-color: var(--primary-color);
+}
+.invalid-feedback {
+  color: red;
+  margin-top: 0.2em;
+  font-size: 0.8em;
+}
+
+/* .disabledbtn {
+  background-color: grey;
+  cursor: not-allowed;
+  pointer-events: all !important;
+} */
